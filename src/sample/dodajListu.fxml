@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerDodavanjeListe">
+   <children>
+      <AnchorPane prefHeight="59.0" prefWidth="500.0" style="-fx-background-color: #2a73ea;">
+         <children>
+            <Label layoutX="73.0" layoutY="16.0" style="-fx-skin: #ffffff; -fx-font-weight: 10;" text="Novi zadatak" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="456.0" layoutY="17.0" mnemonicParsing="false" onAction="#changeToTableView" text="-&gt;" />
+            <Button layoutX="5.0" layoutY="17.0" mnemonicParsing="false" onAction="#cancelChange" text="&lt;-" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="527.0" prefHeight="23.0" prefWidth="500.0" style="-fx-background-color: #2a73ea;">
+         <children>
+            <Label alignment="TOP_RIGHT" layoutX="200.0" layoutY="5.0" text="Copyright © Vasha" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="MS Office Symbol Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="3.0" layoutY="59.0" prefHeight="468.0" prefWidth="500.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <children>
+            <Label layoutX="18.0" layoutY="47.0" prefHeight="27.0" prefWidth="180.0" text="Upišite ime zadatka">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="text" layoutX="18.0" layoutY="87.0" prefHeight="26.0" prefWidth="328.0" />
+            <Label layoutX="18.0" layoutY="176.0" text="Datum do kojeg želite obavit zadatak">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="date" layoutX="14.0" layoutY="221.0" prefHeight="26.0" prefWidth="203.0" />
+            <Label layoutX="18.0" layoutY="312.0" text="Dodajte u listu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choice" layoutX="14.0" layoutY="356.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
