@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerPunaLista">
+   <children>
+      <AnchorPane prefHeight="59.0" prefWidth="500.0" style="-fx-background-color: #2a73ea;">
+         <children>
+            <MenuButton layoutX="6.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #2a73ea;" text="Sve liste " textFill="WHITE">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#filterSve" text="Sve" />
+                <MenuItem mnemonicParsing="false" onAction="#filterDefault" text="Default" />
+                  <MenuItem mnemonicParsing="false" onAction="#filterPoslovno" text="Poslovno" />
+                  <MenuItem mnemonicParsing="false" onAction="#filterOsobno" text="Osobno" />
+                  <MenuItem mnemonicParsing="false" onAction="#filterŠoping" text="Šoping" />
+              </items>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </MenuButton>
+            <TextField layoutX="338.0" layoutY="15.0" prefHeight="31.0" prefWidth="149.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="504.0" prefHeight="59.0" prefWidth="500.0" style="-fx-background-color: #2a73ea;">
+         <children>
+            <Label alignment="TOP_RIGHT" layoutX="200.0" layoutY="34.0" text="Copyright © Vasha" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="MS Office Symbol Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="445.0" layoutY="5.0" mnemonicParsing="false" onAction="#addNewTask" prefHeight="49.0" prefWidth="49.0" style="-fx-background-radius: 1000;" text="+">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="49.0" prefWidth="49.0" style="-fx-background-radius: 1000;" text="-">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="taskTable" layoutY="59.0" prefHeight="445.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="145.0" text="Naziv zadatka" />
+            <TableColumn fx:id="dateColumn" prefWidth="187.0" text="Datum isteka zadatka" />
+            <TableColumn fx:id="categoryColumn" prefWidth="167.0" text="Kategorija" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
